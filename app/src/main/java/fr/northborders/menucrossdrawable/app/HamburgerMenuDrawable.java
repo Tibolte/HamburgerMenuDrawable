@@ -10,7 +10,7 @@ import com.nineoldandroids.util.Property;
 /**
  * Created by thibaultguegan on 05/09/2014.
  */
-public class MenuCrossDrawable extends Drawable {
+public class HamburgerMenuDrawable extends Drawable {
     private static final long ANIMATION_DURATION = 300;
 
     private Paint mLinePaint;
@@ -25,11 +25,11 @@ public class MenuCrossDrawable extends Drawable {
 
     private boolean mMenuMode;
 
-    public MenuCrossDrawable(){
+    public HamburgerMenuDrawable(){
         this(10, Color.YELLOW, Color.RED);
     }
 
-    public MenuCrossDrawable(int strokeWidth, int lineColor, int backgroundColor){
+    public HamburgerMenuDrawable(int strokeWidth, int lineColor, int backgroundColor){
         mStrokeWidth = strokeWidth;
         mLineColor = lineColor;
         mBackgroundColor = backgroundColor;
@@ -152,14 +152,14 @@ public class MenuCrossDrawable extends Drawable {
                 AnimatorSet set = new AnimatorSet();
                 int delta = mStrokeWidth;
                 set.playTogether(
-                        ObjectAnimator.ofFloat(MenuCrossDrawable.this, mPropertyPointAX, mBounds.left),
-                        ObjectAnimator.ofFloat(MenuCrossDrawable.this, mPropertyPointAY, mBounds.top),
-                        ObjectAnimator.ofFloat(MenuCrossDrawable.this, mPropertyPointBX, mBounds.right),
-                        ObjectAnimator.ofFloat(MenuCrossDrawable.this, mPropertyPointBY, mBounds.bottom),
-                        ObjectAnimator.ofFloat(MenuCrossDrawable.this, mPropertyPointEX, mBounds.left),
-                        ObjectAnimator.ofFloat(MenuCrossDrawable.this, mPropertyPointEY, mBounds.bottom),
-                        ObjectAnimator.ofFloat(MenuCrossDrawable.this, mPropertyPointFX, mBounds.right),
-                        ObjectAnimator.ofFloat(MenuCrossDrawable.this, mPropertyPointFY, mBounds.top)
+                        ObjectAnimator.ofFloat(HamburgerMenuDrawable.this, mPropertyPointAX, mBounds.left),
+                        ObjectAnimator.ofFloat(HamburgerMenuDrawable.this, mPropertyPointAY, mBounds.top),
+                        ObjectAnimator.ofFloat(HamburgerMenuDrawable.this, mPropertyPointBX, mBounds.right),
+                        ObjectAnimator.ofFloat(HamburgerMenuDrawable.this, mPropertyPointBY, mBounds.bottom),
+                        ObjectAnimator.ofFloat(HamburgerMenuDrawable.this, mPropertyPointEX, mBounds.left),
+                        ObjectAnimator.ofFloat(HamburgerMenuDrawable.this, mPropertyPointEY, mBounds.bottom),
+                        ObjectAnimator.ofFloat(HamburgerMenuDrawable.this, mPropertyPointFX, mBounds.right),
+                        ObjectAnimator.ofFloat(HamburgerMenuDrawable.this, mPropertyPointFY, mBounds.top)
                 );
                 set.setDuration(ANIMATION_DURATION/2).start();
             }
@@ -206,14 +206,14 @@ public class MenuCrossDrawable extends Drawable {
             public void onAnimationEnd(Animator animator) {
                 AnimatorSet set = new AnimatorSet();
                 set.playTogether(
-                        ObjectAnimator.ofFloat(MenuCrossDrawable.this, mPropertyPointAX, mBounds.left),
-                        ObjectAnimator.ofFloat(MenuCrossDrawable.this, mPropertyPointAY, mBounds.top),
-                        ObjectAnimator.ofFloat(MenuCrossDrawable.this, mPropertyPointBX, mBounds.right),
-                        ObjectAnimator.ofFloat(MenuCrossDrawable.this, mPropertyPointBY, mBounds.top),
-                        ObjectAnimator.ofFloat(MenuCrossDrawable.this, mPropertyPointEX, mBounds.left),
-                        ObjectAnimator.ofFloat(MenuCrossDrawable.this, mPropertyPointEY, mBounds.bottom),
-                        ObjectAnimator.ofFloat(MenuCrossDrawable.this, mPropertyPointFX, mBounds.right),
-                        ObjectAnimator.ofFloat(MenuCrossDrawable.this, mPropertyPointFY, mBounds.bottom)
+                        ObjectAnimator.ofFloat(HamburgerMenuDrawable.this, mPropertyPointAX, mBounds.left),
+                        ObjectAnimator.ofFloat(HamburgerMenuDrawable.this, mPropertyPointAY, mBounds.top),
+                        ObjectAnimator.ofFloat(HamburgerMenuDrawable.this, mPropertyPointBX, mBounds.right),
+                        ObjectAnimator.ofFloat(HamburgerMenuDrawable.this, mPropertyPointBY, mBounds.top),
+                        ObjectAnimator.ofFloat(HamburgerMenuDrawable.this, mPropertyPointEX, mBounds.left),
+                        ObjectAnimator.ofFloat(HamburgerMenuDrawable.this, mPropertyPointEY, mBounds.bottom),
+                        ObjectAnimator.ofFloat(HamburgerMenuDrawable.this, mPropertyPointFX, mBounds.right),
+                        ObjectAnimator.ofFloat(HamburgerMenuDrawable.this, mPropertyPointFY, mBounds.bottom)
 
                 );
                 set.setDuration(ANIMATION_DURATION/2).start();
@@ -260,7 +260,7 @@ public class MenuCrossDrawable extends Drawable {
     private PointProperty mPropertyPointFX = new XPointProperty(5);
     private PointProperty mPropertyPointFY = new YPointProperty(5);
 
-    private abstract class PointProperty extends Property<MenuCrossDrawable, Float> {
+    private abstract class PointProperty extends Property<HamburgerMenuDrawable, Float> {
 
         protected int mPointIndex;
 
@@ -277,12 +277,12 @@ public class MenuCrossDrawable extends Drawable {
         }
 
         @Override
-        public Float get(MenuCrossDrawable object) {
+        public Float get(HamburgerMenuDrawable object) {
             return object.x(mPointIndex);
         }
 
         @Override
-        public void set(MenuCrossDrawable object, Float value) {
+        public void set(HamburgerMenuDrawable object, Float value) {
             object.mPoints[object.xPosition(mPointIndex)] = value;
             invalidateSelf();
         }
@@ -295,12 +295,12 @@ public class MenuCrossDrawable extends Drawable {
         }
 
         @Override
-        public Float get(MenuCrossDrawable object) {
+        public Float get(HamburgerMenuDrawable object) {
             return object.y(mPointIndex);
         }
 
         @Override
-        public void set(MenuCrossDrawable object, Float value) {
+        public void set(HamburgerMenuDrawable object, Float value) {
             object.mPoints[object.yPosition(mPointIndex)] = value;
             invalidateSelf();
         }
