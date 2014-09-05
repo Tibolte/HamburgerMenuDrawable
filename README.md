@@ -1,4 +1,4 @@
-MenuCrossDrawable
+HamburgerMenuDrawable
 =================
 
 Recently I came accross some articles on Dribble which were showing some animated menu buttons, commonly called Burger buttons.
@@ -22,4 +22,4 @@ Linkedin: https://www.linkedin.com/profile/view?id=93515047
 
 ## License
 
-MenuCrossDrawable is available under the MIT license. See the LICENSE file for more info.
+HamburgerMenuDrawable is available under the MIT license. See the LICENSE file for more info.
