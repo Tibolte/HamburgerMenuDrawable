@@ -17,10 +17,6 @@ to animate the lines and make a cross and a hamburger appear successively. Here 
 
 Tested on APIs 2.2+, requires the nineOldAndroid jar file included
 
-## Author
-
-Thibault Guégan, thibault.guegan@gmail.com
-Linkedin: https://www.linkedin.com/profile/view?id=93515047
 
 ## License
 
