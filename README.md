@@ -3,7 +3,7 @@ HamburgerMenuDrawable
 
 [![Android Arsenal](https://img.shields.io/badge/Android%20Arsenal-HamburgerMenuDrawable-brightgreen.svg?style=flat)](https://android-arsenal.com/details/1/915)
 
-Recently I came accross some articles on Dribble which were showing some animated menu buttons, commonly called Burger buttons.
+Recently I came across some articles on Dribble which were showing some animated menu buttons, commonly called Burger buttons.
 An example of this is illustrated on this page: https://dribbble.com/shots/1654493-Hamburger-Icon-in-Framer?list=users&offset=1
 
 After a bit of search and help of Flavien Laurent and his project TickPlusDrawable (https://github.com/flavienlaurent/tickplusdrawable),
